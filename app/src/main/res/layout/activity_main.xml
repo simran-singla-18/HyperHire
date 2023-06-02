@@ -1,0 +1,548 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolBar"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/back"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/ic_back"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/tvText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="자유톡"
+                    android:fontFamily="@font/noto_sans"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:id="@+id/ivNotification"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="16dp"
+                    android:src="@drawable/ic_notification"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="37.48dp"
+            android:layout_height="37.61dp"
+            app:civ_border_color="#ECBDAE"
+            app:civ_circle_background_color="#ECBDAE"
+            app:civ_border_width="0dp"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="18dp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/toolBar" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5.3dp"
+            android:lineSpacingExtra="-5sp"
+            android:text="안녕 나 응애 "
+            android:fontFamily="@font/noto_sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivProfile"
+            app:layout_constraintTop_toTopOf="@id/ivProfile" />
+
+        <ImageView
+            android:id="@+id/ivProfileTick"
+            android:layout_width="14dp"
+            android:layout_height="20dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_check_circle"
+            app:layout_constraintStart_toEndOf="@id/tvProfileText"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileText"
+            app:layout_constraintTop_toTopOf="@id/tvProfileText" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/some_id"
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:lineSpacingExtra="-4sp"
+            android:text="1일전"
+            android:fontFamily="@font/noto_sans"
+            android:textColor=" #919EB6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileTick"
+            app:layout_constraintStart_toEndOf="@id/ivProfileTick"
+            app:layout_constraintTop_toTopOf="@id/ivProfileTick" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cm"
+            android:layout_width="38dp"
+            android:layout_height="14dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="165cm"
+            android:textColor=" #919EB6"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/tvProfileText"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/cmDot"
+            android:layout_width="wrap_content"
+            android:layout_height="12dp"
+            android:layout_marginHorizontal="3dp"
+            android:text="."
+            android:textColor="@color/black"
+            app:layout_constraintStart_toEndOf="@id/cm"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileText" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextKg"
+            android:layout_width="27dp"
+            android:layout_height="16dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="63kg"
+            android:textColor=" #919EB6"
+            android:textSize="12sp"
+            app:layout_constraintStart_toEndOf="@id/cmDot"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileText" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/tag"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:minHeight="0dp"
+            android:minWidth="10dp"
+            android:paddingHorizontal="17dp"
+            android:includeFontPadding="false"
+            android:layout_marginEnd="16dp"
+            android:backgroundTint="#01B99F"
+            android:text="팔로우"
+            android:fontFamily="@font/noto_sans"
+            android:textColor="@color/white"
+            app:cornerRadius="29dp"
+            app:layout_constraintBottom_toBottomOf="@id/tvTextKg"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextKorean"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:lineSpacingExtra="-5sp"
+            android:textSize="14sp"
+            android:fontFamily="@font/noto_sans"
+            android:text="지난 월요일에 했던 이벤트 중 가장 괜찮은 상품 뭐야?"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/ivProfile"
+            app:layout_constraintTop_toBottomOf="@id/tvTextKg" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvDescText"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="16dp"
+            android:textSize="12sp"
+            android:lineSpacingExtra="-4sp"
+            android:fontFamily="@font/noto_sans"
+            android:text="@string/desc"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvTextKorean"
+            app:layout_constraintTop_toBottomOf="@id/tvTextKorean" />
+
+        <com.google.android.material.chip.ChipGroup
+            android:id="@+id/chips"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            app:singleLine="false"
+            app:chipSpacingVertical="-5dp"
+            app:chipSpacing="8dp"
+            android:layout_marginTop="16dp"
+            app:layout_constraintTop_toBottomOf="@id/tvDescText"
+            app:layout_constraintStart_toStartOf="@id/tvDescText"
+            app:layout_constraintEnd_toEndOf="@id/tvDescText"/>
+
+
+        <ImageView
+            android:id="@+id/rectangle"
+            android:layout_width="match_parent"
+            android:layout_height="450dp"
+            android:background="@drawable/image"
+            android:scaleType="fitXY"
+            android:layout_marginTop="16dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/chips" />
+
+        <ImageView
+            android:id="@+id/ivHeart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="19.33dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLike"
+            android:layout_width="0dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="6dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="5"
+            android:textColor=" #919EB6"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeart"
+            app:layout_constraintStart_toEndOf="@id/ivHeart"
+            app:layout_constraintTop_toTopOf="@id/ivHeart" />
+
+        <ImageView
+            android:id="@+id/ivmsg"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="19.33dp"
+            android:backgroundTint="@color/white"
+            android:src="@drawable/msg"
+            app:layout_constraintStart_toEndOf="@id/tvLike"
+            app:layout_constraintTop_toBottomOf="@id/rectangle" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMsg"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/noto_sans"
+            android:layout_marginBottom="1dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="5"
+            android:textColor=" #919EB6"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivmsg"
+            app:layout_constraintStart_toEndOf="@id/ivmsg"
+            app:layout_constraintTop_toTopOf="@id/ivmsg" />
+
+
+        <ImageView
+            android:id="@+id/ivbookmark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="22dp"
+            android:layout_marginTop="19.33dp"
+            android:src="@drawable/ic_bookmark"
+            app:layout_constraintStart_toEndOf="@id/tvMsg"
+            app:layout_constraintTop_toBottomOf="@id/rectangle" />
+
+        <ImageView
+            android:id="@+id/ivMore"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="25.33dp"
+            android:layout_marginTop="19.33dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintStart_toEndOf="@id/ivbookmark"
+            app:layout_constraintTop_toBottomOf="@id/rectangle" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginTop="17.33dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ivHeart"
+            android:background="#E9EBEF"/>
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            app:civ_border_color="#ECBDAE"
+            app:civ_circle_background_color="#ECBDAE"
+            app:civ_border_width="0dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/profile"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileTextComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5.3dp"
+            android:lineSpacingExtra="-5sp"
+            android:text="안녕 나 응애 "
+            android:textStyle="bold"
+            android:fontFamily="@font/noto_sans"
+            android:textSize="14sp"
+            app:layout_constraintStart_toEndOf="@id/ivProfileComment"
+            app:layout_constraintTop_toTopOf="@id/ivProfileComment"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileComment" />
+
+        <ImageView
+            android:id="@+id/ivProfileTickComment"
+            android:layout_width="14dp"
+            android:layout_height="14dp"
+            android:layout_marginStart="2dp"
+            android:src="@drawable/ic_check_circle"
+            app:layout_constraintStart_toEndOf="@id/tvProfileTextComment"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileTextComment"
+            app:layout_constraintTop_toTopOf="@id/tvProfileTextComment" />
+
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:lineSpacingExtra="-4sp"
+            android:text="1일전"
+            android:fontFamily="@font/noto_sans"
+            android:textColor=" #919EB6"
+            android:textSize="10sp"
+            app:layout_constraintBottom_toBottomOf="@id/ivProfileTickComment"
+            app:layout_constraintStart_toEndOf="@id/ivProfileTickComment"
+            app:layout_constraintTop_toTopOf="@id/ivProfileTickComment" />
+
+        <ImageView
+            android:id="@+id/ivMoreProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="16dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/view" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="17dp"
+            android:layout_marginEnd="16dp"
+            android:lineSpacingExtra="-4sp"
+            android:fontFamily="@font/noto_sans"
+            android:text="어머 제가 있던 테이블이 제일 반응이 좋았나보네요🤭
+    우짤래미님도 아시겠지만 저도 일반인 몸매 그 이상도 이하도 아니잖아요?! 그런 제가 기꺼이 도전해봤는데 생각보다
+    괜찮았어요! 오늘 중으로 라이브 리뷰 올라온다고 하니  꼭 봐주세용~!"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvProfileTextComment"
+            app:layout_constraintTop_toBottomOf="@id/tvProfileTextComment" />
+
+        <ImageView
+            android:id="@+id/ivHeartComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.73dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="@+id/tvComment"
+            app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLikeComment"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="5"
+            android:textColor="#AFB9CA"
+            android:textSize="9.33dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeartComment"
+            app:layout_constraintStart_toEndOf="@id/ivHeartComment"
+            app:layout_constraintTop_toTopOf="@id/ivHeartComment" />
+
+        <ImageView
+            android:id="@+id/ivmsgComment"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
+            android:layout_marginStart="10.21dp"
+            android:layout_marginTop="9.73dp"
+            android:src="@drawable/msg"
+            app:layout_constraintStart_toEndOf="@id/tvLikeComment"
+            app:layout_constraintTop_toBottomOf="@id/tvComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMsgComment"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="4dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="5"
+            android:textColor="#AFB9CA"
+            android:textSize="9.33dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivmsgComment"
+            app:layout_constraintStart_toEndOf="@id/ivmsgComment"
+            app:layout_constraintTop_toTopOf="@id/ivmsgComment" />
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileSubComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginTop="18dp"
+            app:civ_border_color="#CF4940"
+            app:civ_circle_background_color="#CF4940"
+            app:civ_border_width="0dp"
+            android:src="@drawable/profile1"
+            app:layout_constraintStart_toStartOf="@+id/ivHeartComment"
+            app:layout_constraintTop_toBottomOf="@id/ivHeartComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvProfileTextSubComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5.3dp"
+            android:lineSpacingExtra="-5sp"
+            android:text="ㅇㅅㅇ"
+            android:fontFamily="@font/noto_sans"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            app:layout_constraintStart_toEndOf="@id/ivProfileSubComment"
+            app:layout_constraintTop_toTopOf="@id/ivProfileSubComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvTextSubProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:lineSpacingExtra="-4sp"
+            android:text="1일전"
+            android:textSize="12sp"
+            android:fontFamily="@font/noto_sans"
+            android:textColor=" #919EB6"
+            app:layout_constraintBottom_toBottomOf="@id/tvProfileTextSubComment"
+            app:layout_constraintStart_toEndOf="@id/tvProfileTextSubComment"
+            app:layout_constraintTop_toTopOf="@id/tvProfileTextSubComment" />
+
+        <ImageView
+            android:id="@+id/ivMoreProfileSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="-10dp"
+            android:src="@drawable/ic_more"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@id/tvTextSubProfile" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSubComment"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="18dp"
+            android:lineSpacingExtra="-4sp"
+            android:fontFamily="@font/noto_sans"
+            android:text="오 대박! 라이브 리뷰 오늘 올라온대요? 챙겨봐야겠다"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@id/tvProfileTextSubComment"
+            app:layout_constraintTop_toBottomOf="@id/tvTextSubProfile" />
+
+        <ImageView
+            android:id="@+id/ivHeartSubComment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9.73dp"
+            android:src="@drawable/heart"
+            app:layout_constraintStart_toStartOf="@+id/tvSubComment"
+            app:layout_constraintTop_toBottomOf="@id/tvSubComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvLikeSubComment"
+            android:layout_width="0dp"
+            android:layout_height="12dp"
+            android:layout_marginStart="5dp"
+            android:lineSpacingExtra="-2sp"
+            android:text="5"
+            android:textColor=" #919EB6"
+            android:textSize="9.33dp"
+            app:layout_constraintBottom_toBottomOf="@id/ivHeartSubComment"
+            app:layout_constraintStart_toEndOf="@id/ivHeartSubComment"
+            app:layout_constraintTop_toTopOf="@id/ivHeartSubComment" />
+
+
+        <ImageView
+            android:id="@+id/imagemode"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_marginBottom="12dp"
+            android:layout_marginLeft="18dp"
+            android:layout_marginTop="33dp"
+            android:background="@drawable/imagesmode"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivHeartSubComment" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvMsgType"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:lineSpacingExtra="-4sp"
+            android:text="댓글을 남겨주세요."
+            android:fontFamily="@font/noto_sans"
+            android:textColor="#AFB9CA"
+            android:textSize="12sp"
+            android:layout_marginHorizontal="18dp"
+            app:layout_constraintBottom_toBottomOf="@id/imagemode"
+            app:layout_constraintEnd_toStartOf="@id/tvSend"
+            app:layout_constraintStart_toEndOf="@id/imagemode"
+            app:layout_constraintTop_toTopOf="@id/imagemode" />
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/tvSend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:lineSpacingExtra="-4sp"
+            android:text="등록"
+            android:fontFamily="@font/noto_sans"
+            android:layout_marginEnd="16dp"
+            android:textColor="#AFB9CA"
+            android:textSize="12sp"
+            app:layout_constraintTop_toTopOf="@id/imagemode"
+            app:layout_constraintBottom_toBottomOf="@id/imagemode"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@id/tvMsgType" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
